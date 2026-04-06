@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ninetynine — Timeless Elegance</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- MOBILE MENU -->
+<!-- MOBILE OVERLAY -->
+<div class="mobile-menu-overlay" id="mobileOverlay"></div>
+
+<!-- MOBILE MENU -->
+<nav class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <a href="#" class="mobile-menu-brand" onclick="closeMobileMenu();window.scrollTo({top:0,behavior:'smooth'});return false;">Ninetynine</a>
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">×</button>
+  </div>
+  <div class="mobile-menu-links">
+    <button class="mobile-menu-home" onclick="closeMobileMenu();window.scrollTo({top:0,behavior:'smooth'});">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Home
+    </button>
+    <a href="#" class="sale-link" onclick="closeMobileMenu()">Sale</a>
+    <a href="#" onclick="closeMobileMenu()">Category</a>
+    <a href="#stores" onclick="closeMobileMenu();smoothScroll('stores');return false;">Offline Store</a>
+  </div>
+</nav>
+
+<!-- NAVBAR -->
+<header id="navbar">
+  <div class="nav-inner">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Ninetynine</a>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#" class="sale-link">SALE</a></li>
+        <li class="has-dropdown">
+          <a href="#" class="dropdown-trigger">Category <svg viewBox="0 0 24 24" width="10" height="10" style="margin-left:3px;vertical-align:middle;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Dress</a></li>
+            <li><a href="#">Blouse</a></li>
+            <li><a href="#">Tunic</a></li>
+            <li><a href="#">Women's Shirt</a></li>
+            <li><a href="#">Outer</a></li>
+            <li><a href="#">Sweater</a></li>
+            <li><a href="#">Oneset</a></li>
+            <li><a href="#">Skirt</a></li>
+            <li><a href="#">Pants</a></li>
+          </ul>
+        </li>
+        <li><a href="#stores" onclick="smoothScroll('stores');return false;">Offline Store</a></li>
+      </ul>
+    </nav>
+    <div class="nav-icons">
+      <button class="nav-icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      </button>
+      <button class="nav-icon-btn" id="navWishlistBtn" aria-label="Wishlist" onclick="openWishlistPage()" style="position:relative;">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      <button class="nav-icon-btn" aria-label="Cart" onclick="openCartPage()" style="position:relative;cursor:pointer;">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      </button>
+      <button class="nav-icon-btn" aria-label="Account">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-fallback" style="background:linear-gradient(135deg,#1a1a1a 0%,#2d2416 40%,#1a1209 100%);">
+    <!-- Decorative elements -->
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 60% 40%,rgba(212,185,154,0.18) 0%,transparent 70%);pointer-events:none;"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 40% at 20% 70%,rgba(212,185,154,0.08) 0%,transparent 60%);pointer-events:none;"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Pengiriman 24 Jam</span><span class="dot">—</span>
+    <span>Payment via Bank BCA &amp; Mandiri</span><span class="dot">—</span>
+    <span>Pengiriman melalui JNE / JNT</span><span class="dot">—</span>
+    <span>Pengiriman 24 Jam</span><span class="dot">—</span>
+    <span>Payment via Bank BCA &amp; Mandiri</span><span class="dot">—</span>
+    <span>Pengiriman melalui JNE / JNT</span><span class="dot">—</span>
+    <span>Pengiriman 24 Jam</span><span class="dot">—</span>
+    <span>Payment via Bank BCA &amp; Mandiri</span><span class="dot">—</span>
+    <span>Pengiriman melalui JNE / JNT</span><span class="dot">—</span>
+    <span>Pengiriman 24 Jam</span><span class="dot">—</span>
+    <span>Payment via Bank BCA &amp; Mandiri</span><span class="dot">—</span>
+    <span>Pengiriman melalui JNE / JNT</span><span class="dot">—</span>
+  </div>
+</div>
+
+<!-- BEST SELLER -->
+<section id="bestseller">
+  <div class="container">
+    <div class="section-head reveal" style="justify-content:center;text-align:center;">
+      <div>
+        <span class="section-label">Most Loved</span>
+        <h2 class="section-title">Best Seller</h2>
+      </div>
+      
+    </div>
+    <div class="product-grid">
+
+      <!-- Card 1 -->
+      <div class="product-card reveal">
+        <div class="product-img-wrap" style="cursor:pointer;" onclick="openProductDetail('prod_0')">
+          <img class="img-main" src="images/img_001.jpg" alt="Sestra 5050 Siderope Flowbordir" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_002.jpg" alt="Sestra 5050 Siderope Flowbordir hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="prod_0" data-name="Siderope Flowbordir" data-series="Code SESTRA 5050 Oneseat" data-price="—" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart" onclick="openProductDetail('prod_0');return false;">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code SESTRA 5050 Oneseat</p>
+          <p class="product-name">Siderope Flowbordir</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="product-card reveal" style="transition-delay:0.1s">
+        <div class="product-img-wrap" style="cursor:pointer;" onclick="openProductDetail('prod_1')">
+          <img class="img-main" src="images/img_003.jpg" alt="DRLFY Cream Bordir Dress" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_004.jpg" alt="DRLFY Cream Bordir Dress hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="prod_1" data-name="Cream Bordir Dress" data-series="Code DRLFY 6080" data-price="—" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart" onclick="openProductDetail('prod_1');return false;">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code DRLFY 6080</p>
+          <p class="product-name">Cream Bordir Dress</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="product-card reveal" style="transition-delay:0.2s">
+        <div class="product-img-wrap" style="cursor:pointer;" onclick="openProductDetail('prod_2')">
+          <img class="img-main" src="images/img_005.jpg" alt="DRYN Seemivest Bordir Flow Dress" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_006.jpg" alt="DRYN Seemivest Bordir Flow Dress hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="prod_2" data-name="Seemivest Bordir Flow Dress" data-series="Code DRYN 6357" data-price="—" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart" onclick="openProductDetail('prod_2');return false;">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code DRYN 6357</p>
+          <p class="product-name">Seemivest Bordir Flow Dress</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="product-card reveal" style="transition-delay:0.3s">
+        <div class="product-img-wrap" style="cursor:pointer;" onclick="openProductDetail('prod_3')">
+          <img class="img-main" src="images/img_007.jpg" alt="TNVX 8307 3 Pocky Top" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_008.jpg" alt="TNVX 8307 3 Pocky Top hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="prod_3" data-name="3 Pocky Top" data-series="Code TNVX 8307" data-price="—" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart" onclick="openProductDetail('prod_3');return false;">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TNVX 8307</p>
+          <p class="product-name">3 Pocky Top</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COLLECTION BANNER -->
+<section id="collection">
+  <div class="collection-bg">
+    <img src="images/img_009.jpg" class="collection-bg-img" alt="Collection Banner">
+  </div>
+  <div class="collection-overlay"></div>
+  <div class="collection-content reveal-left">
+    <span class="collection-label">Ninetynine — 2026</span>
+    <h2 class="collection-title">Timeless<br><em>Daily Essentials</em></h2>
+    <p class="collection-sub">Discover pieces crafted for the modern woman. Refined silhouettes, premium fabrics, and timeless style.</p>
+    <a href="#" class="collection-cta" onclick="openLooksPage();return false;">
+      Get Your Look Now
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- OUR PICKS -->
+<section id="ourpicks">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="section-label">Curated For You</span>
+        <h2 class="section-title">Our Picks</h2>
+      </div>
+      <a href="#" class="section-head-link" onclick="openAllProductsPage();return false;">Browse All</a>
+    </div>
+    <div class="product-grid">
+
+      <!-- Pick 1 -->
+      <div class="product-card reveal">
+        <div class="product-img-wrap" style="cursor:pointer;" onclick="openProductDetail('prod_4')">
+          <img class="img-main" src="images/img_010.jpg" alt="Flowcolour Cream Blouse" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_011.jpg" alt="Flowcolour Cream Blouse hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="prod_4" data-name="Flowcolour Cream Blouse" data-series="Code TPSHRL 9157" data-price="IDR 128.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart" onclick="openProductDetail('prod_4');return false;">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TPSHRL 9157</p>
+          <p class="product-name">Flowcolour Cream Blouse</p>
+          <p class="product-price">IDR 128.000</p>
+        </div>
+      </div>
+
+      <!-- Pick 2 -->
+      <div class="product-card reveal" style="transition-delay:0.1s">
+        <div class="product-img-wrap" style="cursor:pointer;" onclick="openProductDetail('prod_5')">
+          <img class="img-main" src="images/img_012.jpg" alt="Flow Pearlbelt Dress" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_013.jpg" alt="Flow Pearlbelt Dress hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="prod_5" data-name="Flow Pearlbelt Dress" data-series="Code DRJSW 00018" data-price="IDR 240.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart" onclick="openProductDetail('prod_5');return false;">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code DRJSW 00018</p>
+          <p class="product-name">Flow Pearlbelt Dress</p>
+          <p class="product-price">IDR 240.000</p>
+        </div>
+      </div>
+
+      <!-- Pick 3 -->
+      <div class="product-card reveal" style="transition-delay:0.2s">
+        <div class="product-img-wrap" style="cursor:pointer;" onclick="openProductDetail('prod_6')">
+          <img class="img-main" src="images/img_014.jpg" alt="Twocolors Bordir Tunic" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_015.jpg" alt="Twocolors Bordir Tunic hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="prod_6" data-name="Twocolors Bordir Tunic" data-series="Code DRYRI 9300" data-price="IDR 195.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart" onclick="openProductDetail('prod_6');return false;">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code DRYRI 9300</p>
+          <p class="product-name">Twocolors Bordir Tunic</p>
+          <p class="product-price">IDR 195.000</p>
+        </div>
+      </div>
+
+      <!-- Pick 4 -->
+      <div class="product-card reveal" style="transition-delay:0.3s">
+        <div class="product-img-wrap" style="cursor:pointer;" onclick="openProductDetail('prod_7')">
+          <img class="img-main" src="images/img_016.jpg" alt="Flow Pattern Dress" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_017.jpg" alt="Flow Pattern Dress hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="prod_7" data-name="Flow Pattern Dress" data-series="Code DRGNT 00137" data-price="IDR 185.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart" onclick="openProductDetail('prod_7');return false;">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code DRGNT 00137</p>
+          <p class="product-name">Flow Pattern Dress</p>
+          <p class="product-price">IDR 185.000</p>
+        </div>
+      </div>
+
+    
+      <!-- Nudes Vinesbordir Tunic -->
+      <div class="product-card reveal">
+        <div class="product-img-wrap" style="cursor:pointer;" onclick="openProductDetail('prod_8')">
+          <div class="badge soldout">Sold Out</div>
+          <img class="img-main" src="images/img_018.jpg" alt="Nudes Vinesbordir Tunic" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_019.jpg" alt="Nudes Vinesbordir Tunic hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="prod_8" data-name="Nudes Vinesbordir Tunic" data-series="Code TPBAP 3178" data-price="IDR 146.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart" onclick="openProductDetail('prod_8');return false;">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TPBAP 3178</p>
+          <p class="product-name">Nudes Vinesbordir Tunic</p>
+          <p class="product-price">IDR 146.000</p>
+        </div>
+      </div>
+      <!-- Flowlace Shirt -->
+      <div class="product-card reveal" style="transition-delay:0.1s">
+        <div class="product-img-wrap" style="cursor:pointer;" onclick="openProductDetail('prod_9')">
+          <img class="img-main" src="images/img_020.jpg" alt="Flowlace Shirt" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_021.jpg" alt="Flowlace Shirt hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="prod_9" data-name="Flowlace Shirt" data-series="Code TPMGR 00020" data-price="IDR 149.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart" onclick="openProductDetail('prod_9');return false;">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TPMGR 00020</p>
+          <p class="product-name">Flowlace Shirt</p>
+          <p class="product-price">IDR 149.000</p>
+        </div>
+      </div>
+      <!-- Brukat Skirt -->
+      <div class="product-card reveal" style="transition-delay:0.2s">
+        <div class="product-img-wrap" style="cursor:pointer;" onclick="openProductDetail('prod_10')">
+          <img class="img-main" src="images/img_022.jpg" alt="Brukat Skirt" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_023.jpg" alt="Brukat Skirt hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="prod_10" data-name="Brukat Skirt" data-series="Code TVAVM 5069" data-price="IDR 139.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart" onclick="openProductDetail('prod_10');return false;">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TVAVM 5069</p>
+          <p class="product-name">Brukat Skirt</p>
+          <p class="product-price">IDR 139.000</p>
+        </div>
+      </div>
+      <!-- Semiouter Flowdress -->
+      <div class="product-card reveal" style="transition-delay:0.3s">
+        <div class="product-img-wrap" style="cursor:pointer;" onclick="openProductDetail('prod_11')">
+          <img class="img-main" src="images/img_024.jpg" alt="Semiouter Flowdress" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_025.jpg" alt="Semiouter Flowdress hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="prod_11" data-name="Semiouter Flowdress" data-series="Code DRYR 2979" data-price="IDR 215.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart" onclick="openProductDetail('prod_11');return false;">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code DRYR 2979</p>
+          <p class="product-name">Semiouter Flowdress</p>
+          <p class="product-price">IDR 215.000</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STORES -->
+<section id="stores">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="section-label">Find Us</span>
+        <h2 class="section-title">Visit Our Store</h2>
+      </div>
+    </div>
+    <div class="stores-grid reveal">
+      <div class="store-cell">
+        <img src="images/img_026.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Madiun Store">
+        <div class="store-overlay">
+          <span class="store-label">Madiun</span>
+          <span class="store-address">Jl. Cokroaminoto No.35</span>
+          <span class="store-hours">Open Daily</span>
+        </div>
+      </div>
+      <div class="store-cell" style="animation-delay:0.08s">
+        <img src="images/img_027.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Ponorogo Store">
+        <div class="store-overlay">
+          <span class="store-label">Ponorogo</span>
+          <span class="store-address">Jl. HOS Cokroaminoto No.70</span>
+          <span class="store-hours">Open Daily</span>
+        </div>
+      </div>
+      <div class="store-cell" style="animation-delay:0.16s">
+        <img src="images/img_028.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Jombang Store">
+        <div class="store-overlay">
+          <span class="store-label">Jombang</span>
+          <span class="store-address">Jl. Gus Dur No.114</span>
+          <span class="store-hours">Open Daily</span>
+        </div>
+      </div>
+      <div class="store-cell" style="animation-delay:0.24s">
+        <img src="images/img_029.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Kediri Store">
+        <div class="store-overlay">
+          <span class="store-label">Kediri</span>
+          <span class="store-address">Jl. Suprapto No.17</span>
+          <span class="store-hours">Open Daily</span>
+        </div>
+      </div>
+      <div class="store-cell" style="animation-delay:0.32s">
+        <img src="images/img_030.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Nganjuk Store">
+        <div class="store-overlay">
+          <span class="store-label">Nganjuk</span>
+          <span class="store-address">Jl. Yos Sudarso No.25</span>
+          <span class="store-hours">Open Daily</span>
+        </div>
+      </div>
+      <div class="store-cell" style="animation-delay:0.40s">
+        <img src="images/img_031.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Blitar Store">
+        <div class="store-overlay">
+          <span class="store-label">Blitar</span>
+          <span class="store-address">Jl. Veteran No.119</span>
+          <span class="store-hours">Open Daily</span>
+        </div>
+      </div>
+      <div class="store-cell" style="animation-delay:0.48s">
+        <img src="images/img_032.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Tulungagung Store">
+        <div class="store-overlay">
+          <span class="store-label">Tulungagung</span>
+          <span class="store-address">Jl. Pangeran Diponegoro</span>
+          <span class="store-hours">Open Daily</span>
+        </div>
+      </div>
+      <div class="store-cell" style="animation-delay:0.56s">
+        <img src="images/img_033.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center;" alt="Sidoarjo Store">
+        <div class="store-overlay">
+          <span class="store-label">Sidoarjo</span>
+          <span class="store-address">Jl. Gatot Subroto</span>
+          <span class="store-hours">Open Daily</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="stores-bottom reveal">
+      <h3 class="stores-big-text">Experience <em>Ninetynine</em><br>Fashion in Person</h3>
+      <p class="stores-sub">Step into our beautifully curated spaces and discover the full Ninetynine collection with our style team.</p>
+      <a href="#" class="stores-btn">
+        Find Nearest Store
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Ninetynine</div>
+        <p>A women's fashion brand celebrating timeless elegance, modern femininity, and the beauty of simplicity.</p>
+        <div class="social-icons">
+          <!-- Instagram -->
+          <div class="social-icon" style="overflow:hidden;padding:4px;background:#000;">
+            <img src="images/img_034.jpg" style="width:100%;height:100%;object-fit:contain;mix-blend-mode:screen;filter:brightness(2);">
+          </div>
+                    <!-- TikTok -->
+          <div class="social-icon" style="overflow:hidden;padding:4px;background:#000;">
+            <img src="images/img_035.jpg" style="width:100%;height:100%;object-fit:contain;mix-blend-mode:screen;filter:brightness(2);">
+          </div>
+          <!-- Shopee -->
+          <div class="social-icon" style="overflow:hidden;padding:4px;background:#000;">
+            <img src="data:image/png;base64,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" style="width:100%;height:100%;object-fit:contain;mix-blend-mode:screen;filter:brightness(2);">
+          </div>
+          <!-- WhatsApp -->
+          <div class="social-icon" style="overflow:hidden;padding:4px;background:#000;">
+            <img src="data:image/png;base64,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" style="width:100%;height:100%;object-fit:contain;mix-blend-mode:screen;filter:brightness(2);">
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Fashion</h4>
+        <ul>
+          <li><a href="#">About Ninetynine</a></li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#stores" onclick="smoothScroll('stores');return false;">Offline Store</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">Shipping Information</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter footer-col">
+        <h4>Stay Updated</h4>
+        <p>Subscribe for new arrivals, exclusive offers, and style inspiration.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address">
+          <button type="submit">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ninetynine. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- NEW ARRIVALS PAGE -->
+<div id="newArrivalsPage" style="display:none;position:fixed;inset:0;z-index:9999;background:#fff;overflow-y:auto;">
+  <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;padding:0 clamp(12px,4vw,64px);">
+    <div style="max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;">
+      <span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:500;letter-spacing:0.04em;">Ninetynine</span>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#888;">All Products</span>
+        <button onclick="closeNewArrivals()" style="background:none;border:1px solid #ddd;border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:#333;transition:all 0.2s;" onmouseover="this.style.background='#000';this.style.color='#fff'" onmouseout="this.style.background='none';this.style.color='#333'">×</button>
+      </div>
+    </div>
+  </header>
+  <div style="max-width:1440px;margin:0 auto;padding:48px clamp(12px,4vw,64px) 80px;">
+    <div style="margin-bottom:40px;">
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#888;display:block;margin-bottom:10px;">Curated For You</span>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,48px);font-weight:500;color:#000;margin:0;">Our Picks — All Products</h1>
+    </div>
+    <div class="product-grid" style="grid-template-columns:repeat(auto-fill,minmax(min(160px, calc(50% - 8px)),1fr));gap:20px 12px;">
+      <div class="product-card reveal">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_036.jpg" alt="3Colour Top" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_037.jpg" alt="3Colour Top hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="na_0" data-name="3Colour Top" data-series="Code TPSKUR 00028" data-price="IDR 126.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TPSKUR 00028</p>
+          <p class="product-name">3Colour Top</p>
+          <p class="product-price">IDR 126.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.07s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_038.jpg" alt="FLOWBORDIR DRESS" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_039.jpg" alt="FLOWBORDIR DRESS hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="na_1" data-name="FLOWBORDIR DRESS" data-series="Code DRCRSD 00015" data-price="IDR 129.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code DRCRSD 00015</p>
+          <p class="product-name">FLOWBORDIR DRESS</p>
+          <p class="product-price">IDR 129.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.14s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_040.jpg" alt="2BT SIDE SKIRT" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_041.jpg" alt="2BT SIDE SKIRT hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="na_2" data-name="2BT SIDE SKIRT" data-series="Code TPLCRD 00053" data-price="IDR 136.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TPLCRD 00053</p>
+          <p class="product-name">2BT SIDE SKIRT</p>
+          <p class="product-price">IDR 136.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.21s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_042.jpg" alt="VEST COLOUR SETSHIRT" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_043.jpg" alt="VEST COLOUR SETSHIRT hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="na_3" data-name="VEST COLOUR SETSHIRT" data-series="Code TNDLN 8456" data-price="IDR 124.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TNDLN 8456</p>
+          <p class="product-name">VEST COLOUR SETSHIRT</p>
+          <p class="product-price">IDR 124.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.28s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_044.jpg" alt="FLOWER CHEST DRESS" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_045.jpg" alt="FLOWER CHEST DRESS hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="na_4" data-name="FLOWER CHEST DRESS" data-series="Code TPBRKN 7004" data-price="IDR 205.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TPBRKN 7004</p>
+          <p class="product-name">FLOWER CHEST DRESS</p>
+          <p class="product-price">IDR 205.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.35s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_046.jpg" alt="FLOW CREPE BORDIR BLOUSE" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_047.jpg" alt="FLOW CREPE BORDIR BLOUSE hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="na_5" data-name="FLOW CREPE BORDIR BLOUSE" data-series="Code TPPML 3443" data-price="IDR 126.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TPPML 3443</p>
+          <p class="product-name">FLOW CREPE BORDIR BLOUSE</p>
+          <p class="product-price">IDR 126.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.42s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_022.jpg" alt="Brukat Skirt" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_023.jpg" alt="Brukat Skirt hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="na_6" data-name="Brukat Skirt" data-series="Code TVAVM 5069" data-price="IDR 139.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TVAVM 5069</p>
+          <p class="product-name">Brukat Skirt</p>
+          <p class="product-price">IDR 139.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.49s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_024.jpg" alt="Semiouter Flowdress" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_025.jpg" alt="Semiouter Flowdress hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="na_7" data-name="Semiouter Flowdress" data-series="Code DRYR 2979" data-price="IDR 215.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code DRYR 2979</p>
+          <p class="product-name">Semiouter Flowdress</p>
+          <p class="product-price">IDR 215.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.56s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_048.jpg" alt="FLORAL BORDIR BLOUSE" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_049.jpg" alt="FLORAL BORDIR BLOUSE hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="na_8" data-name="FLORAL BORDIR BLOUSE" data-series="Code TPRFWR 00019" data-price="IDR 139.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TPRFWR 00019</p>
+          <p class="product-name">FLORAL BORDIR BLOUSE</p>
+          <p class="product-price">IDR 139.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.63s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_050.jpg" alt="SOFTJEANS GOLDBT BLOUSE" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_051.jpg" alt="SOFTJEANS GOLDBT BLOUSE hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="na_9" data-name="SOFTJEANS GOLDBT BLOUSE" data-series="Code DRYN 6357" data-price="IDR 129.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code DRYN 6357</p>
+          <p class="product-name">SOFTJEANS GOLDBT BLOUSE</p>
+          <p class="product-price">IDR 129.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.70s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_010.jpg" alt="Flowcolour Cream Blouse" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_011.jpg" alt="Flowcolour Cream Blouse hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="ap_0" data-name="Flowcolour Cream Blouse" data-series="Code TPSHRL 9157" data-price="IDR 128.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TPSHRL 9157</p>
+          <p class="product-name">Flowcolour Cream Blouse</p>
+          <p class="product-price">IDR 128.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.77s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_012.jpg" alt="Flow Pearlbelt Dress" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_013.jpg" alt="Flow Pearlbelt Dress hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="ap_1" data-name="Flow Pearlbelt Dress" data-series="Code DRJSW 00018" data-price="IDR 240.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code DRJSW 00018</p>
+          <p class="product-name">Flow Pearlbelt Dress</p>
+          <p class="product-price">IDR 240.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.84s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_014.jpg" alt="Twocolors Bordir Tunic" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_015.jpg" alt="Twocolors Bordir Tunic hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="ap_2" data-name="Twocolors Bordir Tunic" data-series="Code DRYRI 9300" data-price="IDR 195.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code DRYRI 9300</p>
+          <p class="product-name">Twocolors Bordir Tunic</p>
+          <p class="product-price">IDR 195.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.91s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_016.jpg" alt="Flow Pattern Dress" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_017.jpg" alt="Flow Pattern Dress hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="ap_3" data-name="Flow Pattern Dress" data-series="Code DRGNT 00137" data-price="IDR 185.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code DRGNT 00137</p>
+          <p class="product-name">Flow Pattern Dress</p>
+          <p class="product-price">IDR 185.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.98s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_018.jpg" alt="Nudes Vinesbordir Tunic" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_019.jpg" alt="Nudes Vinesbordir Tunic hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="ap_4" data-name="Nudes Vinesbordir Tunic" data-series="Code TPBAP 3178" data-price="IDR 146.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TPBAP 3178</p>
+          <p class="product-name">Nudes Vinesbordir Tunic</p>
+          <p class="product-price">IDR 146.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:1.05s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_020.jpg" alt="Flowlace Shirt" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_021.jpg" alt="Flowlace Shirt hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="ap_5" data-name="Flowlace Shirt" data-series="Code TPMGR 00020" data-price="IDR 149.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TPMGR 00020</p>
+          <p class="product-name">Flowlace Shirt</p>
+          <p class="product-price">IDR 149.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:1.12s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_022.jpg" alt="Brukat Skirt" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_023.jpg" alt="Brukat Skirt hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="ap_6" data-name="Brukat Skirt" data-series="Code TVAVM 5069" data-price="IDR 139.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code TVAVM 5069</p>
+          <p class="product-name">Brukat Skirt</p>
+          <p class="product-price">IDR 139.000</p>
+        </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:1.19s">
+        <div class="product-img-wrap">
+          <img class="img-main" src="images/img_024.jpg" alt="Semiouter Flowdress" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img class="img-hover" src="images/img_025.jpg" alt="Semiouter Flowdress hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn" aria-label="Add to wishlist" data-id="ap_7" data-name="Semiouter Flowdress" data-series="Code DRYR 2979" data-price="IDR 215.000" onclick="toggleWishlist(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="product-action-btn" aria-label="Add to cart">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-series">Code DRYR 2979</p>
+          <p class="product-name">Semiouter Flowdress</p>
+          <p class="product-price">IDR 215.000</p>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+<!-- WISHLIST PAGE -->
+<div id="wishlistPage" style="display:none;position:fixed;inset:0;z-index:9999;background:#fff;overflow-y:auto;">
+  <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;padding:0 clamp(12px,4vw,48px);">
+    <div style="max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:500;letter-spacing:0.04em;">Ninetynine</span>
+        <span style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#888;">/ Wishlist</span>
+      </div>
+      <button onclick="closeWishlistPage()" style="background:none;border:1px solid #ddd;border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:#333;transition:all 0.2s;" onmouseover="this.style.background='#000';this.style.color='#fff'" onmouseout="this.style.background='none';this.style.color='#333'">×</button>
+    </div>
+  </header>
+  <div style="max-width:1440px;margin:0 auto;padding:40px clamp(12px,4vw,48px) 80px;">
+    <div style="margin-bottom:32px;display:flex;align-items:baseline;gap:12px;">
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,40px);font-weight:500;margin:0;">My Wishlist</h1>
+      <span id="wishlistCount" style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;letter-spacing:0.1em;"></span>
+    </div>
+    <div id="wishlistEmpty" style="display:none;text-align:center;padding:80px 0;">
+      <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#ccc" stroke-width="1.5" style="margin-bottom:16px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <p style="font-family:'DM Sans',sans-serif;color:#999;font-size:14px;margin:0 0 8px;">Wishlist kamu masih kosong</p>
+      <p style="font-family:'DM Sans',sans-serif;color:#bbb;font-size:12px;">Klik ikon ♡ pada produk untuk menyimpannya di sini</p>
+    </div>
+    <div id="wishlistGrid" class="product-grid" style="grid-template-columns:repeat(auto-fill,minmax(min(160px,calc(50% - 8px)),1fr));gap:20px 14px;"></div>
+  </div>
+</div>
+
+<!-- LOOKS PAGE -->
+<div id="looksPage" style="display:none;position:fixed;inset:0;z-index:9999;background:#fff;overflow-y:auto;">
+  <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;padding:0 clamp(12px,4vw,48px);">
+    <div style="max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:500;letter-spacing:0.04em;">Ninetynine</span>
+        <span style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#888;">/ Looks</span>
+      </div>
+      <button onclick="closeLooksPage()" style="background:none;border:1px solid #ddd;border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:#333;transition:all 0.2s;" onmouseover="this.style.background='#000';this.style.color='#fff'" onmouseout="this.style.background='none';this.style.color='#333'">×</button>
+    </div>
+  </header>
+  <div style="max-width:1440px;margin:0 auto;padding:48px clamp(12px,4vw,48px) 80px;">
+    <div style="margin-bottom:40px;">
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#888;display:block;margin-bottom:10px;">Style Inspiration</span>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,48px);font-weight:500;color:#000;margin:0;">Get Your Look</h1>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,calc(50% - 8px)),1fr));gap:24px 20px;">
+
+      <!-- Look 1 -->
+      <div style="cursor:pointer;transition:transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="background:#F6F1E9;border-radius:16px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden;">
+          <span style="font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:rgba(0,0,0,0.12);user-select:none;">1</span>
+          <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;">
+            <p style="font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 2px;">Style Guide</p>
+            <p style="font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:#111;margin:0;">Look 1</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Look 2 -->
+      <div style="cursor:pointer;transition:transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="background:#EDE8E2;border-radius:16px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden;">
+          <span style="font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:rgba(0,0,0,0.12);user-select:none;">2</span>
+          <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;">
+            <p style="font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 2px;">Style Guide</p>
+            <p style="font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:#111;margin:0;">Look 2</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Look 3 -->
+      <div style="cursor:pointer;transition:transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="background:#E8E4DF;border-radius:16px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden;">
+          <span style="font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:rgba(0,0,0,0.12);user-select:none;">3</span>
+          <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;">
+            <p style="font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 2px;">Style Guide</p>
+            <p style="font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:#111;margin:0;">Look 3</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Look 4 -->
+      <div style="cursor:pointer;transition:transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="background:#E2DDD7;border-radius:16px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden;">
+          <span style="font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:rgba(0,0,0,0.12);user-select:none;">4</span>
+          <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;">
+            <p style="font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 2px;">Style Guide</p>
+            <p style="font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:#111;margin:0;">Look 4</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT IMAGE STORE -->
+<div id="productImageStore" style="display:none;" aria-hidden="true">
+  <img id="catalog-main-0" src="images/img_001.jpg">
+  <img id="catalog-hover-0" src="images/img_002.jpg">
+  <img id="catalog-main-1" src="images/img_003.jpg">
+  <img id="catalog-hover-1" src="images/img_004.jpg">
+  <img id="catalog-main-2" src="images/img_005.jpg">
+  <img id="catalog-hover-2" src="images/img_006.jpg">
+  <img id="catalog-main-3" src="images/img_007.jpg">
+  <img id="catalog-hover-3" src="images/img_008.jpg">
+  <img id="catalog-main-4" src="images/img_010.jpg">
+  <img id="catalog-hover-4" src="images/img_011.jpg">
+  <img id="catalog-main-5" src="images/img_012.jpg">
+  <img id="catalog-hover-5" src="images/img_013.jpg">
+  <img id="catalog-main-6" src="images/img_014.jpg">
+  <img id="catalog-hover-6" src="images/img_015.jpg">
+  <img id="catalog-main-7" src="images/img_016.jpg">
+  <img id="catalog-hover-7" src="images/img_017.jpg">
+  <img id="catalog-main-8" src="images/img_018.jpg">
+  <img id="catalog-hover-8" src="images/img_019.jpg">
+  <img id="catalog-main-9" src="images/img_020.jpg">
+  <img id="catalog-hover-9" src="images/img_021.jpg">
+  <img id="catalog-main-10" src="images/img_022.jpg">
+  <img id="catalog-hover-10" src="images/img_023.jpg">
+  <img id="catalog-main-11" src="images/img_024.jpg">
+  <img id="catalog-hover-11" src="images/img_025.jpg">
+</div>
+
+<!-- PRODUCT DETAIL PAGE -->
+<div id="productDetailPage" style="display:none;position:fixed;inset:0;z-index:9998;background:#fff;overflow-y:auto;">
+  <!-- Sticky header -->
+  <header style="position:sticky;top:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);z-index:10;border-bottom:1px solid #f0f0f0;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,48px);display:flex;align-items:center;justify-content:space-between;height:64px;">
+      <button onclick="closeProductDetail()" style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:8px;color:#555;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.1em;padding:6px 0;transition:color 0.2s;" onmouseover="this.style.color='#000'" onmouseout="this.style.color='#555'">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back
+      </button>
+      <span style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;letter-spacing:0.04em;">Ninetynine</span>
+      <button id="pdCartBtn" onclick="openCartPage()" style="background:none;border:none;cursor:pointer;position:relative;padding:6px;color:#333;" title="Cart">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span id="pdCartBadge" style="display:none;position:absolute;top:0;right:0;background:#B85252;color:#fff;border-radius:50%;width:16px;height:16px;font-size:9px;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;font-weight:600;"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div style="max-width:1200px;margin:0 auto;padding:32px clamp(16px,4vw,48px) 80px;">
+    <div id="pdContent" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+      
+      <!-- Left: Images -->
+      <div>
+        <div id="pdMainImg" style="border-radius:16px;overflow:hidden;aspect-ratio:3/4;background:#f5f5f5;margin-bottom:12px;cursor:zoom-in;">
+          <img id="pdImg1" src="" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:opacity 0.3s;">
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div id="pdThumb1" style="border-radius:10px;overflow:hidden;aspect-ratio:3/4;background:#f5f5f5;cursor:pointer;border:2px solid #111;">
+            <img id="pdThumbImg1" src="" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          </div>
+          <div id="pdThumb2" style="border-radius:10px;overflow:hidden;aspect-ratio:3/4;background:#f5f5f5;cursor:pointer;border:2px solid transparent;">
+            <img id="pdThumbImg2" src="" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Info + Form -->
+      <div style="padding-top:8px;">
+        <p id="pdSeries" style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 8px;"></p>
+        <h1 id="pdName" style="font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,34px);font-weight:500;color:#111;margin:0 0 8px;line-height:1.2;"></h1>
+        <p id="pdPrice" style="font-family:'DM Sans',sans-serif;font-size:22px;font-weight:500;color:#111;margin:0 0 20px;letter-spacing:0.02em;"></p>
+
+        <div style="width:40px;height:1px;background:#e0e0e0;margin-bottom:20px;"></div>
+
+        <!-- Color -->
+        <div id="pdColorSection" style="margin-bottom:20px;">
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 10px;">Color</p>
+          <div id="pdColors" style="display:flex;flex-wrap:wrap;gap:8px;"></div>
+        </div>
+
+        <!-- Size: All Size only -->
+        <div style="margin-bottom:20px;">
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 10px;">Ukuran</p>
+          <span style="display:inline-block;padding:8px 20px;border:1.5px solid #111;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;color:#111;background:#fafaf9;">All Size</span>
+        </div>
+
+        <!-- Qty -->
+        <div style="margin-bottom:20px;">
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 10px;">Quantity</p>
+          <div style="display:flex;align-items:center;gap:0;border:1px solid #ddd;border-radius:8px;width:fit-content;overflow:hidden;">
+            <button onclick="changeQty(-1)" style="background:#f8f8f8;border:none;width:40px;height:40px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#eee'" onmouseout="this.style.background='#f8f8f8'">−</button>
+            <span id="pdQty" style="width:44px;text-align:center;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;">1</span>
+            <button onclick="changeQty(1)" style="background:#f8f8f8;border:none;width:40px;height:40px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#eee'" onmouseout="this.style.background='#f8f8f8'">+</button>
+          </div>
+        </div>
+
+        <!-- Shipping info -->
+        <div style="margin-bottom:20px;">
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 8px;">Pengiriman</p>
+          <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;margin:0;">Tersedia via JNE, J&T Express, dan pengambilan di toko. Pilih saat checkout.</p>
+        </div>
+
+        <!-- Email -->
+        <div style="margin-bottom:24px;">
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 10px;">Email (untuk konfirmasi pesanan)</p>
+          <input id="pdEmail" type="email" placeholder="your@email.com" style="width:100%;padding:11px 14px;border:1px solid #ddd;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;transition:border-color 0.2s;" onfocus="this.style.borderColor='#111'" onblur="this.style.borderColor='#ddd'">
+        </div>
+
+        <!-- Description -->
+        <div style="margin-bottom:28px;padding:16px;background:#f9f8f6;border-radius:10px;">
+          <p id="pdDesc" style="font-family:'DM Sans',sans-serif;font-size:13px;color:#555;line-height:1.7;margin:0 0 8px;"></p>
+          <p id="pdMaterial" style="font-family:'DM Sans',sans-serif;font-size:11px;color:#999;margin:0;">Material: <span id="pdMaterialVal"></span></p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <button onclick="addToCart()" style="width:100%;padding:16px;background:#fff;border:2px solid #111;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:all 0.25s;display:flex;align-items:center;justify-content:center;gap:10px;" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='#fff'">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </button>
+          <button onclick="buyNow()" style="width:100%;padding:16px;background:#111;border:2px solid #111;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;font-weight:500;color:#fff;cursor:pointer;transition:all 0.25s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">
+            Buy Now
+          </button>
+        </div>
+
+        <!-- Toast message -->
+        <div id="pdToast" style="display:none;margin-top:12px;padding:12px 16px;background:#f0faf4;border:1px solid #b2dfcb;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:12px;color:#2d7a4f;text-align:center;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CART PAGE -->
+<div id="cartPage" style="display:none;position:fixed;inset:0;z-index:9997;background:#f5f5f5;overflow-y:auto;">
+
+  <!-- Sticky Header -->
+  <header style="position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+    <div style="max-width:960px;margin:0 auto;padding:0 16px;display:flex;align-items:center;height:56px;gap:14px;">
+      <button onclick="closeCartPage()" style="background:none;border:none;cursor:pointer;display:flex;align-items:center;color:#555;padding:4px;transition:color 0.2s;" onmouseover="this.style.color='#111'" onmouseout="this.style.color='#555'">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      </button>
+      <span style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;flex:1;">Shopping Cart</span>
+      <span id="cartItemCount" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;"></span>
+    </div>
+  </header>
+
+  <!-- Body -->
+  <div style="max-width:960px;margin:0 auto;padding:12px 16px 140px;">
+
+    <!-- Empty state -->
+    <div id="cartEmpty" style="display:none;text-align:center;padding:80px 20px;">
+      <div style="width:80px;height:80px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+        <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#bbb" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      </div>
+      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#888;margin:0 0 6px;">Keranjang kamu kosong</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:#bbb;margin:0 0 20px;">Yuk, tambahkan produk favorit kamu!</p>
+      <button onclick="closeCartPage()" style="padding:10px 28px;background:#111;color:#fff;border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.12em;cursor:pointer;">Belanja Sekarang</button>
+    </div>
+
+    <!-- Seller group card -->
+    <div id="cartItems" style="display:none;flex-direction:column;gap:10px;">
+
+      <!-- Select all bar -->
+      <div style="background:#fff;border-radius:10px;padding:12px 16px;display:flex;align-items:center;gap:10px;">
+        <input type="checkbox" id="selectAllCart" onchange="toggleSelectAll(this.checked)" style="width:18px;height:18px;accent-color:#D84040;cursor:pointer;">
+        <label for="selectAllCart" style="font-family:'DM Sans',sans-serif;font-size:13px;color:#333;cursor:pointer;">Pilih Semua</label>
+        <button onclick="deleteSelected()" style="margin-left:auto;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:12px;color:#D84040;cursor:pointer;padding:4px 8px;border-radius:4px;transition:background 0.2s;" onmouseover="this.style.background='#fff0f0'" onmouseout="this.style.background='none'">Hapus Dipilih</button>
+      </div>
+
+      <!-- Seller block -->
+      <div style="background:#fff;border-radius:10px;overflow:hidden;">
+        <div style="padding:12px 16px;border-bottom:1px solid #f5f5f5;display:flex;align-items:center;gap:8px;">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="#D84040"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:#111;">Ninetynine Official Store</span>
+          <span style="margin-left:4px;font-family:'DM Sans',sans-serif;font-size:10px;color:#D84040;border:1px solid #D84040;border-radius:3px;padding:1px 5px;">Official</span>
+        </div>
+        <div id="cartProductList" style="padding:0;"></div>
+      </div>
+
+      <!-- Voucher -->
+      <div style="background:#fff;border-radius:10px;padding:14px 16px;">
+        <div style="display:flex;align-items:center;gap:8px;cursor:pointer;" onclick="toggleVoucher()">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D84040" stroke-width="2"><rect x="1" y="6" width="22" height="12" rx="2"/><path d="M12 6v12M6 12h.01M18 12h.01"/></svg>
+          <span style="font-family:'DM Sans',sans-serif;font-size:13px;color:#333;flex:1;">Voucher & Promo</span>
+          <span id="voucherLabel" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#D84040;">Pilih Voucher</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#999" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+        <div id="voucherPanel" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid #f5f5f5;">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button class="voucher-chip" onclick="applyVoucher(this,'NN10','10%')" style="padding:6px 14px;border:1.5px dashed #D84040;border-radius:20px;background:#fff5f5;color:#D84040;font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;transition:all 0.2s;">🏷 HEMAT 10% · NINETYNINE10</button>
+            <button class="voucher-chip" onclick="applyVoucher(this,'ONGKIR','Gratis Ongkir')" style="padding:6px 14px;border:1.5px dashed #D84040;border-radius:20px;background:#fff5f5;color:#D84040;font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;transition:all 0.2s;">🚚 Gratis Ongkir · ONGKIRFREE</button>
+            <button class="voucher-chip" onclick="applyVoucher(this,'NEWMEMBER','IDR 15.000')" style="padding:6px 14px;border:1.5px dashed #D84040;border-radius:20px;background:#fff5f5;color:#D84040;font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;transition:all 0.2s;">🎁 Diskon 15rb · NEWMEMBER</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shipping method -->
+      <div style="background:#fff;border-radius:10px;padding:14px 16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#555" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <span style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:#333;">Pengiriman</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;padding:8px 10px;border:1.5px solid #f0f0f0;border-radius:8px;transition:border-color 0.2s;" id="cship-jne" onclick="selectCartShipping('JNE Regular',this)">
+            <input type="radio" name="cartShip" value="JNE" checked style="accent-color:#D84040;width:15px;height:15px;">
+            <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;flex:1;">JNE Regular</span>
+            <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;">Est. 2-3 hari</span>
+          </label>
+          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;padding:8px 10px;border:1.5px solid #f0f0f0;border-radius:8px;transition:border-color 0.2s;" id="cship-jnt" onclick="selectCartShipping('J&T Express',this)">
+            <input type="radio" name="cartShip" value="JNT" style="accent-color:#D84040;width:15px;height:15px;">
+            <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;flex:1;">J&T Express</span>
+            <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;">Est. 1-2 hari</span>
+          </label>
+          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;padding:8px 10px;border:1.5px solid #f0f0f0;border-radius:8px;transition:border-color 0.2s;" id="cship-pickup" onclick="selectCartShipping('Ambil di Toko',this)">
+            <input type="radio" name="cartShip" value="Pickup" style="accent-color:#D84040;width:15px;height:15px;">
+            <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;flex:1;">Ambil di Toko</span>
+            <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#D84040;font-weight:500;">Gratis</span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Sticky Bottom Summary -->
+  <div id="cartSummary" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:30;background:#fff;border-top:1px solid #eee;box-shadow:0 -2px 12px rgba(0,0,0,0.08);">
+    <div style="max-width:960px;margin:0 auto;padding:10px 16px;">
+      <!-- Price breakdown -->
+      <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:10px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;">Subtotal (<span id="selectedCount">0</span> produk)</span>
+          <span id="cartSubtotal" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#111;"></span>
+        </div>
+        <div id="discountRow" style="display:none;justify-content:space-between;align-items:center;">
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#D84040;" id="discountLabel">Diskon Voucher</span>
+          <span id="discountAmount" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#D84040;font-weight:500;"></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f0f0f0;padding-top:6px;margin-top:2px;">
+          <span style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#111;">Total</span>
+          <span id="cartTotal" style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:700;color:#D84040;"></span>
+        </div>
+      </div>
+      <!-- Checkout button -->
+      <button onclick="proceedCheckout()" style="width:100%;padding:14px;background:#D84040;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.1em;font-weight:600;color:#fff;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;" onmouseover="this.style.background='#c03030'" onmouseout="this.style.background='#D84040'">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Checkout Sekarang
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKOUT PAGE — Step 1: Data Diri -->
+<div id="checkoutPage" style="display:none;position:fixed;inset:0;z-index:10001;background:#f5f5f5;overflow-y:auto;">
+  <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+    <div style="max-width:680px;margin:0 auto;padding:0 16px;display:flex;align-items:center;height:56px;gap:12px;">
+      <button onclick="closeCheckoutPage()" style="background:none;border:none;cursor:pointer;color:#555;padding:4px;display:flex;" title="Kembali">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      </button>
+      <span style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;flex:1;">Checkout</span>
+      <!-- Step indicator -->
+      <div style="display:flex;align-items:center;gap:4px;">
+        <div style="width:24px;height:24px;border-radius:50%;background:#111;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">1</div>
+        <div style="width:20px;height:2px;background:#ddd;"></div>
+        <div style="width:24px;height:24px;border-radius:50%;background:#ddd;color:#999;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">2</div>
+        <div style="width:20px;height:2px;background:#ddd;"></div>
+        <div style="width:24px;height:24px;border-radius:50%;background:#ddd;color:#999;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">3</div>
+      </div>
+    </div>
+  </header>
+  <div style="max-width:680px;margin:0 auto;padding:20px 16px 100px;">
+    <!-- Order summary mini -->
+    <div id="checkoutOrderSummary" style="background:#fff;border-radius:12px;padding:16px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);"></div>
+
+    <!-- Form -->
+    <div style="background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:0 0 16px;">Data Penerima</h3>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div>
+          <label style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;display:block;margin-bottom:5px;">Nama Lengkap *</label>
+          <input id="coName" type="text" placeholder="Masukkan nama lengkap" style="width:100%;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;transition:border-color 0.2s;" onfocus="this.style.borderColor='#111'" onblur="this.style.borderColor='#e8e8e8'">
+        </div>
+        <div>
+          <label style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;display:block;margin-bottom:5px;">Email *</label>
+          <input id="coEmail" type="email" placeholder="email@example.com" style="width:100%;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;transition:border-color 0.2s;" onfocus="this.style.borderColor='#111'" onblur="this.style.borderColor='#e8e8e8'">
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;color:#aaa;margin:4px 0 0;">Konfirmasi pesanan akan dikirim ke email ini</p>
+        </div>
+        <div>
+          <label style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;display:block;margin-bottom:5px;">No. HP / WhatsApp</label>
+          <input id="coPhone" type="tel" placeholder="08xxxxxxxxxx" style="width:100%;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;transition:border-color 0.2s;" onfocus="this.style.borderColor='#111'" onblur="this.style.borderColor='#e8e8e8'">
+        </div>
+        <div>
+          <label style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;display:block;margin-bottom:5px;">Alamat Lengkap *</label>
+          <textarea id="coAddress" placeholder="Jl. Contoh No. 1, Kelurahan, Kecamatan, Kota, Kode Pos" rows="3" style="width:100%;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;resize:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#111'" onblur="this.style.borderColor='#e8e8e8'"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shipping -->
+    <div style="background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:0 0 14px;">Metode Pengiriman</h3>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <label id="cship-jne" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #111;border-radius:10px;transition:all 0.2s;" onclick="hlShip(this)">
+          <input type="radio" name="coShipping" value="JNE Regular" checked style="accent-color:#111;width:16px;height:16px;">
+          <div style="flex:1;">
+            <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">JNE Regular</p>
+            <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">Estimasi 2–3 hari kerja</p>
+          </div>
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;">Gratis</span>
+        </label>
+        <label id="cship-jnt" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:10px;transition:all 0.2s;" onclick="hlShip(this)">
+          <input type="radio" name="coShipping" value="J&T Express" style="accent-color:#111;width:16px;height:16px;">
+          <div style="flex:1;">
+            <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">J&T Express</p>
+            <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">Estimasi 1–2 hari kerja</p>
+          </div>
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;">Gratis</span>
+        </label>
+        <label id="cship-pickup" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:10px;transition:all 0.2s;" onclick="hlShip(this)">
+          <input type="radio" name="coShipping" value="Ambil di Toko" style="accent-color:#111;width:16px;height:16px;">
+          <div style="flex:1;">
+            <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">Ambil di Toko</p>
+            <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">Tersedia di semua cabang Ninetynine</p>
+          </div>
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#2e7d32;font-weight:600;">Gratis</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Payment method -->
+    <div style="background:#fff;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:0 0 14px;">Metode Pembayaran</h3>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <label id="pay-bca" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #111;border-radius:10px;transition:all 0.2s;" onclick="hlPay(this)">
+          <input type="radio" name="payment" value="BCA" checked style="accent-color:#111;width:16px;height:16px;">
+          <div style="flex:1;"><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">Transfer BCA</p><p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">Virtual Account BCA</p></div>
+          <span style="background:#005BAC;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;">BCA</span>
+        </label>
+        <label id="pay-mandiri" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:10px;transition:all 0.2s;" onclick="hlPay(this)">
+          <input type="radio" name="payment" value="Mandiri" style="accent-color:#111;width:16px;height:16px;">
+          <div style="flex:1;"><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">Transfer Mandiri</p><p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">Virtual Account Mandiri</p></div>
+          <span style="background:#003F88;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;">MDR</span>
+        </label>
+        <label id="pay-qris" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:10px;transition:all 0.2s;" onclick="hlPay(this)">
+          <input type="radio" name="payment" value="QRIS" style="accent-color:#111;width:16px;height:16px;">
+          <div style="flex:1;"><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">QRIS</p><p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">Scan QR dari semua e-wallet & m-banking</p></div>
+          <span style="background:#E8102C;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;">QRIS</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky bottom -->
+  <div style="position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #eee;padding:12px 16px;z-index:20;">
+    <div style="max-width:680px;margin:0 auto;">
+      <button onclick="goToPaymentStep()" style="width:100%;padding:15px;background:#111;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.12em;font-weight:600;color:#fff;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">
+        Lanjut ke Pembayaran
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- PAYMENT PAGE — Step 2: VA / QRIS -->
+<div id="paymentPage" style="display:none;position:fixed;inset:0;z-index:10002;background:#f5f5f5;overflow-y:auto;">
+  <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+    <div style="max-width:680px;margin:0 auto;padding:0 16px;display:flex;align-items:center;height:56px;gap:12px;">
+      <button onclick="closePaymentPage()" style="background:none;border:none;cursor:pointer;color:#555;padding:4px;display:flex;">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      </button>
+      <span style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;flex:1;">Pembayaran</span>
+      <div style="display:flex;align-items:center;gap:4px;">
+        <div style="width:24px;height:24px;border-radius:50%;background:#2e7d32;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">✓</div>
+        <div style="width:20px;height:2px;background:#111;"></div>
+        <div style="width:24px;height:24px;border-radius:50%;background:#111;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">2</div>
+        <div style="width:20px;height:2px;background:#ddd;"></div>
+        <div style="width:24px;height:24px;border-radius:50%;background:#ddd;color:#999;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">3</div>
+      </div>
+    </div>
+  </header>
+  <div style="max-width:680px;margin:0 auto;padding:20px 16px 100px;">
+
+    <!-- Timer -->
+    <div style="background:#fff3e0;border-radius:10px;padding:12px 16px;margin-bottom:14px;display:flex;align-items:center;gap:10px;">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#f57f17" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#e65100;">Selesaikan pembayaran dalam: </span>
+      <span id="payTimer" style="font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;color:#D84040;"></span>
+    </div>
+
+    <!-- Amount -->
+    <div style="background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;text-align:center;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 6px;">Total Pembayaran</p>
+      <p id="payTotalAmount" style="font-family:'Playfair Display',serif;font-size:28px;font-weight:500;color:#D84040;margin:0;"></p>
+      <p id="payOrderIdSmall" style="font-family:'DM Sans',sans-serif;font-size:11px;color:#aaa;margin:6px 0 0;"></p>
+    </div>
+
+    <!-- VA Section (BCA/Mandiri) -->
+    <div id="vaSection" style="background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+        <div id="payBankLogo" style="padding:4px 10px;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#fff;background:#005BAC;">BCA</div>
+        <div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#111;margin:0;">Virtual Account</p>
+          <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">Salin nomor VA di bawah</p>
+        </div>
+      </div>
+      <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:0 0 6px;">Nomor Virtual Account</p>
+      <div style="display:flex;align-items:center;gap:10px;background:#f8f8f8;border-radius:8px;padding:14px 16px;">
+        <span id="vaNumber" style="font-family:'DM Sans',sans-serif;font-size:20px;font-weight:700;color:#111;letter-spacing:0.06em;flex:1;"></span>
+        <button onclick="copyVA()" id="copyVABtn" style="background:#111;color:#fff;border:none;border-radius:6px;padding:8px 14px;font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;white-space:nowrap;transition:background 0.2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">Salin</button>
+      </div>
+      <div style="margin-top:14px;padding:12px;background:#e8f4ff;border-radius:8px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#0277bd;margin:0;line-height:1.6;">
+          📌 Cara bayar:<br>
+          1. Buka m-Banking atau ATM <span id="payBankName">BCA</span><br>
+          2. Pilih Transfer → Virtual Account<br>
+          3. Masukkan nomor VA di atas<br>
+          4. Konfirmasi jumlah & bayar
+        </p>
+      </div>
+    </div>
+
+    <!-- QRIS Section -->
+    <div id="qrisSection" style="display:none;background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <p style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#111;margin:0 0 4px;">Scan QRIS</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:0 0 16px;">Bisa dibayar dengan semua e-wallet & m-banking</p>
+      <!-- QRIS code (generated pattern) -->
+      <div style="display:flex;justify-content:center;margin-bottom:16px;">
+        <div style="position:relative;width:220px;height:220px;background:#fff;border:2px solid #111;border-radius:12px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+          <canvas id="qrisCanvas" width="196" height="196"></canvas>
+          <!-- Center logo -->
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.15);">
+            <span style="font-family:'Playfair Display',serif;font-size:10px;font-weight:700;color:#111;">NN</span>
+          </div>
+        </div>
+      </div>
+      <div style="background:#f5f5f5;border-radius:8px;padding:10px 14px;text-align:center;margin-bottom:12px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:10px;color:#888;margin:0 0 2px;">NMID: ID10230712345678</p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;color:#111;margin:0;">Ninetynine Official Store</p>
+      </div>
+      <div style="padding:12px;background:#f3e5f5;border-radius:8px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#6a1b9a;margin:0;line-height:1.6;">
+          📌 Cara bayar QRIS:<br>
+          1. Buka aplikasi e-wallet / m-banking<br>
+          2. Pilih "Bayar" / "Scan QR"<br>
+          3. Arahkan kamera ke QR di atas<br>
+          4. Konfirmasi pembayaran
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Sticky bottom -->
+  <div style="position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #eee;padding:12px 16px;z-index:20;">
+    <div style="max-width:680px;margin:0 auto;">
+      <button onclick="confirmPayment()" style="width:100%;padding:15px;background:#2e7d32;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.12em;font-weight:600;color:#fff;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;" onmouseover="this.style.background='#1b5e20'" onmouseout="this.style.background='#2e7d32'">
+        Saya Sudah Bayar — Konfirmasi
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ORDER SUCCESS PAGE — Step 3 -->
+<div id="confirmationPage" style="display:none;position:fixed;inset:0;z-index:10003;background:#f5f5f5;overflow-y:auto;">
+  <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+    <div style="max-width:680px;margin:0 auto;padding:0 16px;display:flex;align-items:center;height:56px;">
+      <span style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;flex:1;text-align:center;">Pesanan Selesai</span>
+    </div>
+  </header>
+  <div style="max-width:680px;margin:0 auto;padding:20px 16px 80px;">
+
+    <!-- Success card -->
+    <div style="background:#fff;border-radius:16px;padding:32px 20px;text-align:center;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <div style="width:72px;height:72px;background:#e8f5e9;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+        <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#2e7d32" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h1 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:500;color:#111;margin:0 0 6px;">Pembayaran Dikonfirmasi! 🎉</h1>
+      <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#888;margin:0 0 16px;">Pesananmu sedang diproses oleh Ninetynine</p>
+      <div style="background:#f5f5f5;border-radius:10px;padding:12px 20px;display:inline-block;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:10px;color:#888;margin:0 0 2px;letter-spacing:0.12em;">NOMOR PESANAN</p>
+        <p id="confOrderId" style="font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;color:#111;margin:0;letter-spacing:0.1em;"></p>
+      </div>
+      <!-- Email status -->
+      <div id="emailSendingNotice" style="margin-top:12px;padding:10px 14px;background:#fff8e1;border-radius:8px;display:block;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:#f57f17;margin:0;">⏳ Mengirim konfirmasi ke email kamu...</p>
+      </div>
+      <div id="emailSentNotice" style="margin-top:12px;padding:10px 14px;background:#e8f5e9;border-radius:8px;display:none;">
+        <p id="emailSentText" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#2e7d32;margin:0;"></p>
+      </div>
+    </div>
+
+    <!-- Product list -->
+    <div style="background:#fff;border-radius:12px;overflow:hidden;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <div style="padding:14px 16px;border-bottom:1px solid #f5f5f5;">
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:#111;">Detail Produk</span>
+      </div>
+      <div id="confProductList"></div>
+    </div>
+
+    <!-- Info pesanan -->
+    <div style="background:#fff;border-radius:12px;padding:18px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#888;margin:0 0 14px;">Informasi Pesanan</h3>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;justify-content:space-between;gap:12px;"><span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;min-width:110px;">Waktu Pesan</span><span id="confDateTime" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;text-align:right;"></span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px;"><span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;min-width:110px;">Penerima</span><span id="confName" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;font-weight:500;text-align:right;"></span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px;"><span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;min-width:110px;">No. HP</span><span id="confPhone" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;text-align:right;"></span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;"><span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;min-width:110px;">Alamat</span><span id="confAddress" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;text-align:right;max-width:200px;"></span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px;"><span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;min-width:110px;">Pengiriman</span><span id="confShipping" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;font-weight:500;text-align:right;"></span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px;"><span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;min-width:110px;">Pembayaran</span><span id="confPayment" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;font-weight:500;text-align:right;"></span></div>
+      </div>
+    </div>
+
+    <!-- Price total -->
+    <div style="background:#fff;border-radius:12px;padding:18px;margin-bottom:20px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <div id="confPriceSummary"></div>
+    </div>
+
+    <!-- Buttons -->
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <button onclick="closeConfirmationPage()" style="width:100%;padding:14px;background:#111;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;color:#fff;cursor:pointer;transition:background 0.2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">Kembali Belanja</button>
+      <button onclick="openAccountPage()" style="width:100%;padding:14px;background:#fff;border:1.5px solid #111;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:#111;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='#fff'">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Lihat Riwayat Pembelian
+      </button>
+      <button onclick="window.print()" style="width:100%;padding:14px;background:#fff;border:1.5px solid #ddd;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#777;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Cetak / Simpan PDF
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ACCOUNT PAGE — Riwayat Pembelian -->
+<div id="accountPage" style="display:none;position:fixed;inset:0;z-index:10004;background:#f5f5f5;overflow-y:auto;">
+  <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+    <div style="max-width:680px;margin:0 auto;padding:0 16px;display:flex;align-items:center;height:56px;gap:12px;">
+      <button onclick="closeAccountPage()" style="background:none;border:none;cursor:pointer;color:#555;padding:4px;display:flex;">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      </button>
+      <span style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;flex:1;">Riwayat Pembelian</span>
+      <button onclick="clearOrderHistory()" style="background:none;border:none;font-family:'DM Sans',sans-serif;font-size:11px;color:#D84040;cursor:pointer;padding:4px 8px;" title="Hapus semua riwayat">Hapus Semua</button>
+    </div>
+  </header>
+  <div style="max-width:680px;margin:0 auto;padding:16px 16px 60px;">
+    <div id="accountEmpty" style="display:none;text-align:center;padding:80px 20px;">
+      <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#ccc" stroke-width="1.5" style="margin-bottom:16px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#888;margin:0 0 4px;">Belum ada riwayat pembelian</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:#bbb;margin:0;">Pesanan yang selesai akan muncul di sini</p>
+    </div>
+    <div id="orderHistoryList" style="display:flex;flex-direction:column;gap:12px;"></div>
+  </div>
+</div>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="strict.config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
